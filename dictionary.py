@@ -15,4 +15,8 @@ def translate(word):
 
 word = input("Enter the word you want to search")
 output = translate(word)
-print(output)
+if type(output) == list:  #Cleans the output and gives it in a nice formatted way
+    for item in output:
+        print(item)
+else:
+    print(output)
